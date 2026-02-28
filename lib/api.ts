@@ -28,7 +28,7 @@ const properties: Property[] = [
         name: "Lake House Retreat",
         description: "A serene hideaway immersed in nature.",
         pricePerNight: 520,
-        imageUrl: "/property_lake_1772187219375.png",
+        imageUrl: "/lahaultimage1.avif",
         features: ["Lake Access", "Fireplace", "Forest View"],
     }
 ];
