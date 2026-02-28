@@ -44,7 +44,7 @@ export function Hero() {
                     transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 >
                     <h1 className="text-white font-serif text-5xl md:text-7xl lg:text-8xl tracking-widest max-w-5xl leading-tight">
-                        THE ART OF <br className="hidden md:block" /> ELEVATED LIVING
+                        YOUR HARBOUR <br className="hidden md:block" /> IN THE HILLS
                     </h1>
                 </motion.div>
 
@@ -54,7 +54,7 @@ export function Hero() {
                     transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
                     className="text-beige/80 mt-6 text-sm md:text-base tracking-[0.2em] uppercase max-w-xl"
                 >
-                    Cinematic beauty meets uncompromised luxury
+                    Welcome to La Hault
                 </motion.p>
             </motion.div>
 
