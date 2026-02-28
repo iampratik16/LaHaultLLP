@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Waves, Wine, Leaf, UtensilsCrossed } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
+import { SplitTextReveal } from "@/components/ui/SplitTextReveal";
 
 const experiences = [
     { icon: Leaf, title: "Holistic Wellness", desc: "A sanctuary for mind, body, and spirit featuring world-class spa facilities." },
@@ -39,9 +40,10 @@ export function Amenities() {
                     <span className="text-gold text-xs tracking-[0.3em] uppercase block mb-8">
                         Curated Experiences
                     </span>
-                    <h2 className="font-serif text-4xl md:text-5xl lg:text-7xl leading-[1.1] mb-12">
-                        Immerse yourself in extraordinary moments.
-                    </h2>
+                    <SplitTextReveal
+                        text="Immerse yourself in<br/>extraordinary moments."
+                        className="font-serif text-4xl md:text-5xl lg:text-7xl mb-12 text-off-white"
+                    />
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                         {experiences.map((exp, i) => (

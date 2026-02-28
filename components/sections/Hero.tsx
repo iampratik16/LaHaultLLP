@@ -60,7 +60,7 @@ export function Hero() {
 
             {/* Floating Booking Widget (Allowed to overflow safely) */}
             <div className="absolute bottom-0 left-0 right-0 z-30 translate-y-[40%] md:translate-y-1/2 px-6 pb-6 md:pb-0 pointer-events-none">
-                <div className="pointer-events-auto">
+                <div className="pointer-events-auto flex items-center justify-center">
                     <BookingWidget />
                 </div>
             </div>

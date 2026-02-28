@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useBookingStore } from "@/store/useBookingStore";
+import { MagneticButton } from "@/components/ui/MagneticButton";
 
 const links = [
     { name: "Residences", href: "#residences" },
@@ -61,12 +62,13 @@ export function Header() {
                                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full" />
                             </Link>
                         ))}
-                        <button
+                        <MagneticButton
+                            magneticPull={20}
                             onClick={() => setModalOpen(true)}
                             className="bg-gold/90 backdrop-blur-sm border border-gold/50 text-white px-8 py-2.5 uppercase tracking-widest text-xs font-semibold hover:bg-gold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.2)]"
                         >
                             Book
-                        </button>
+                        </MagneticButton>
                     </nav>
 
                     {/* Mobile Toggle */}

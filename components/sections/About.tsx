@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { SplitTextReveal } from "@/components/ui/SplitTextReveal";
 
 export function About() {
     return (
@@ -19,9 +20,10 @@ export function About() {
                     <span className="text-gold text-xs tracking-[0.3em] uppercase block mb-8">
                         The Philosophy
                     </span>
-                    <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-8">
-                        A sanctuary crafted for the senses.
-                    </h2>
+                    <SplitTextReveal
+                        text="A sanctuary crafted<br/>for the senses."
+                        className="font-serif text-4xl md:text-5xl lg:text-7xl mb-8 text-charcoal"
+                    />
                     <p className="text-charcoal/70 leading-relaxed text-sm md:text-base mb-12 max-w-md">
                         Every detail at Lahault is meticulously designed to create an atmosphere of profound serenity and cinematic elegance. We redefine hospitality through the lens of art and uncompromised luxury.
                     </p>

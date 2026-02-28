@@ -2,9 +2,10 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { MockAPI, Property } from "@/lib/api";
 import { Plus } from "lucide-react";
 import Image from "next/image";
+import { RevealMask } from "@/components/ui/RevealMask";
+import { MockAPI, Property } from "@/lib/api";
 
 export function Properties() {
     const [properties, setProperties] = useState<Property[]>([]);
@@ -65,18 +66,20 @@ export function Properties() {
                                 transition={{ duration: 1, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] }}
                                 className="group cursor-pointer relative"
                             >
-                                <div className="relative w-full aspect-[4/5] overflow-hidden bg-charcoal/5">
-                                    <div className="absolute inset-0 bg-charcoal transition-transform duration-[1.5s] ease-[0.22,1,0.36,1] group-hover:scale-110 flex items-center justify-center">
-                                        <Image src={prop.imageUrl} alt={prop.name} fill className="object-cover" />
-                                    </div>
+                                <RevealMask delay={index * 0.1}>
+                                    <div className="relative w-full aspect-[4/5] overflow-hidden bg-charcoal/5">
+                                        <div className="absolute inset-0 bg-charcoal transition-transform duration-[1.5s] ease-[0.22,1,0.36,1] group-hover:scale-110 flex items-center justify-center">
+                                            <Image src={prop.imageUrl} alt={prop.name} fill className="object-cover" />
+                                        </div>
 
-                                    {/* Quick View Overlay */}
-                                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-start justify-end p-6 pointer-events-none z-10">
-                                        <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 delay-100 shadow-xl">
-                                            <Plus className="w-5 h-5" />
+                                        {/* Quick View Overlay */}
+                                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-start justify-end p-6 pointer-events-none z-10">
+                                            <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 delay-100 shadow-xl">
+                                                <Plus className="w-5 h-5" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </RevealMask>
 
                                 {/* Glassmorphic Text Card */}
                                 <div className="relative -mt-16 mx-4 md:mx-6 z-20 bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 transition-all duration-700 ease-[0.22,1,0.36,1] group-hover:bg-white/95 group-hover:-translate-y-4">
