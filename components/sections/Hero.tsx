@@ -24,7 +24,7 @@ export function Hero() {
                 >
                     <div className="absolute inset-0 bg-black/40 z-10" />
                     <Image
-                        src="/hero_cinematic_1772187122581.png"
+                        src="/heroimage.jpg"
                         alt="Cinematic Villa"
                         fill
                         priority
