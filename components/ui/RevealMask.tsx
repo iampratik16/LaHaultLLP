@@ -16,20 +16,11 @@ export function RevealMask({
     delay = 0,
     className = "",
 }: RevealMaskProps) {
-    // Define the mask sweeping animation based on direction
-    const variants = {
-        hidden: {
-            clipPath:
-                direction === "up"
-                    ? "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"
-                    : direction === "down"
-                        ? "polygon(0 0, 100% 0, 100% 0, 0 0)"
-                        : direction === "left"
-                            ? "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)"
-                            : "polygon(0 0, 0 0, 0 100%, 0 100%)",
-        },
+    const blockVariants = {
+        hidden: { y: "0%", x: "0%" },
         visible: {
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            y: direction === "up" ? "-100%" : direction === "down" ? "100%" : "0%",
+            x: direction === "left" ? "-100%" : direction === "right" ? "100%" : "0%",
             transition: {
                 duration: 1.2,
                 ease: [0.22, 1, 0.36, 1] as const, // Cinematic easing
@@ -39,13 +30,16 @@ export function RevealMask({
     };
 
     return (
-        <motion.div
-            variants={variants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className={`relative overflow-hidden ${className}`}
-        >
+        <div className={`relative overflow-hidden ${className}`}>
+            {/* The Solid Curtain Block */}
+            <motion.div
+                variants={blockVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="absolute inset-0 z-30 bg-[#f4f4f0]" // Off-white luxury curtain
+            />
+
             {/* We apply a slight scale-down effect wrapped around the children for extra premium feel */}
             <motion.div
                 initial={{ scale: 1.1 }}
@@ -60,6 +54,6 @@ export function RevealMask({
             >
                 {children}
             </motion.div>
-        </motion.div>
+        </div>
     );
 }
