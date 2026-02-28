@@ -20,7 +20,7 @@ const properties: Property[] = [
         name: "The Grand Suite",
         description: "Experience ultimate luxury with panoramic views.",
         pricePerNight: 850,
-        imageUrl: "/lahaultimage2.jpg",
+        imageUrl: "/grand-suite.jpg",
         features: ["Private Pool", "Butler Service", "Ocean View"],
     },
     {
@@ -28,7 +28,7 @@ const properties: Property[] = [
         name: "Lake House Retreat",
         description: "A serene hideaway immersed in nature.",
         pricePerNight: 520,
-        imageUrl: "/lahaultimage1.avif",
+        imageUrl: "/lakehouse-retreat.avif",
         features: ["Lake Access", "Fireplace", "Forest View"],
     }
 ];

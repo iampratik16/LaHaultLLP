@@ -69,7 +69,7 @@ export function Properties() {
                                 <RevealMask delay={index * 0.1} className="w-full aspect-[4/5]">
                                     <div className="relative w-full h-full overflow-hidden bg-charcoal/5">
                                         <div className="absolute inset-0 bg-charcoal transition-transform duration-[1.5s] ease-[0.22,1,0.36,1] group-hover:scale-110 flex items-center justify-center">
-                                            <Image src={prop.imageUrl} alt={prop.name} fill className="object-cover" />
+                                            <Image unoptimized src={prop.imageUrl} alt={prop.name} fill className="object-cover" />
                                         </div>
 
                                         {/* Quick View Overlay */}
