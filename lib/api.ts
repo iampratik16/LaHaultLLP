@@ -20,7 +20,7 @@ const properties: Property[] = [
         name: "The Grand Suite",
         description: "Experience ultimate luxury with panoramic views.",
         pricePerNight: 850,
-        imageUrl: "/property_pool_1772187204371.png",
+        imageUrl: "/lahaultimage2.jpg",
         features: ["Private Pool", "Butler Service", "Ocean View"],
     },
     {
