@@ -62,7 +62,7 @@ export function Properties() {
                                 key={prop.id}
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-100px" }}
+                                viewport={{ once: true, amount: 0.2 }}
                                 transition={{ duration: 1, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] }}
                                 className="group cursor-pointer relative"
                             >

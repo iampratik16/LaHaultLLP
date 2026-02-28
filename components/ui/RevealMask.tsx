@@ -43,14 +43,14 @@ export function RevealMask({
             variants={variants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-15%" }}
+            viewport={{ once: true, amount: 0.2 }}
             className={`relative overflow-hidden ${className}`}
         >
             {/* We apply a slight scale-down effect wrapped around the children for extra premium feel */}
             <motion.div
                 initial={{ scale: 1.1 }}
                 whileInView={{ scale: 1 }}
-                viewport={{ once: true, margin: "-15%" }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{
                     duration: 1.6,
                     ease: [0.22, 1, 0.36, 1] as const,
